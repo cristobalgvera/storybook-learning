@@ -1,15 +1,8 @@
 {
-  "name": "intro-storybook-react-template",
+  "name": "storybook-react-learning",
   "version": "0.1.0",
-  "description": "Starter template to get up and running quickly with React and Storybook",
-  "author": "Chromatic <https://chromatic.com/>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/chromaui/intro-storybook-react-template"
-  },
-  "bugs": {
-    "url": "https://github.com/chromaui/intro-storybook-react-template/issues"
-  },
+  "description": "Repository to learn Storybook with React",
+  "author": "cristobalgvera",
   "license": "MIT",
   "private": true,
   "dependencies": {
