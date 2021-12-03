@@ -1,5 +1,6 @@
 import PureTaskList from './PureTaskList';
 import * as TaskStories from '../Task/Task.stories';
+import { TASK_PINNED } from '../../constants/taskStates';
 
 export default {
   title: 'PureTaskList',
@@ -25,7 +26,7 @@ export const WithPinnedTasks = Template.bind({});
 WithPinnedTasks.args = {
   tasks: [
     ...Default.args.tasks.slice(0, 5),
-    { id: '6', title: 'Task 6 (pinned)', state: 'TASK_PINNED' },
+    { id: '6', title: 'Task 6 (pinned)', state: TASK_PINNED },
   ],
 };
 

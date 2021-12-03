@@ -1,4 +1,9 @@
-import Task from './Task';
+import {
+  TASK_ARCHIVED,
+  TASK_INBOX,
+  TASK_PINNED,
+} from '../../constants/taskStates';
+import Task from './';
 
 export default {
   title: 'Task',
@@ -12,8 +17,8 @@ Default.args = {
   task: {
     id: '1',
     title: 'Task 1',
-    state: 'TASK_INBOX',
-    updatedAt: new Date(2018, 0, 1, 9, 0),
+    state: TASK_INBOX,
+    // updatedAt: new Date(2018, 0, 1, 9, 0),
   },
 };
 
@@ -21,7 +26,7 @@ export const Pinned = TaskTemplate.bind({});
 Pinned.args = {
   task: {
     ...Default.args.task,
-    state: 'TASK_PINNED',
+    state: TASK_PINNED,
   },
 };
 
@@ -29,6 +34,6 @@ export const Archived = TaskTemplate.bind({});
 Archived.args = {
   task: {
     ...Default.args.task,
-    state: 'TASK_ARCHIVED',
+    state: TASK_ARCHIVED,
   },
 };

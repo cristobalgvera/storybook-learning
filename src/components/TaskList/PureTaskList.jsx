@@ -1,5 +1,10 @@
 import PropTypes from 'prop-types';
-import Task from '../Task/Task';
+import {
+  TASK_ARCHIVED,
+  TASK_INBOX,
+  TASK_PINNED,
+} from '../../constants/taskStates';
+import Task from '../Task';
 import EmptyTaskList from './ui/EmptyTaskList';
 import LoadingList from './ui/LoadingList';
 
@@ -15,9 +20,9 @@ export default function PureTaskList({
   if (!tasks.length) return <EmptyTaskList />;
 
   const orderedTasks = [
-    ...tasks.filter(({ state }) => state === 'TASK_PINNED'),
-    ...tasks.filter(({ state }) => state === 'TASK_INBOX'),
-    ...tasks.filter(({ state }) => state === 'TASK_ARCHIVED'),
+    ...tasks.filter(({ state }) => state === TASK_PINNED),
+    ...tasks.filter(({ state }) => state === TASK_INBOX),
+    ...tasks.filter(({ state }) => state === TASK_ARCHIVED),
   ];
 
   return (
