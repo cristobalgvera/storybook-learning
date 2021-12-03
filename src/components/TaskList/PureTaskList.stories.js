@@ -1,13 +1,13 @@
-import TaskList from './TaskList';
+import PureTaskList from './PureTaskList';
 import * as TaskStories from '../Task/Task.stories';
 
 export default {
-  title: 'TaskList',
-  component: TaskList,
+  title: 'PureTaskList',
+  component: PureTaskList,
   decorators: [(story) => <div style={{ padding: '3rem' }}>{story()}</div>],
 };
 
-const Template = (args) => <TaskList {...args} />;
+const Template = (args) => <PureTaskList {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -26,15 +26,6 @@ WithPinnedTasks.args = {
   tasks: [
     ...Default.args.tasks.slice(0, 5),
     { id: '6', title: 'Task 6 (pinned)', state: 'TASK_PINNED' },
-  ],
-};
-
-export const WithArchivedTasks = Template.bind({});
-WithArchivedTasks.args = {
-  tasks: [
-    ...Default.args.tasks.slice(0, 4),
-    { id: '6', title: 'Task 6 (archived)', state: 'TASK_ARCHIVED' },
-    ...Default.args.tasks.slice(4, 5),
   ],
 };
 
